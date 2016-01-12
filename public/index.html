@@ -1,0 +1,17 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script>
+</head>
+<body>
+  <form action="/" enctype="multipart/form-data" method="POST">
+    <input type="file" name="info" />
+    <button type="submit">Upload</button>
+  </form>
+  <script>
+    $('form').ajaxForm(function(data) {
+      if (data) alert("File size: " + data.size + " bytes");
+    });
+  </script>
+</body>
+</html>
